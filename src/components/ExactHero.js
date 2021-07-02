@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState, useContext } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Context } from "./Facebook";
+import R2D2 from "../";
 import { Card } from "antd";
 import { Button } from "antd";
 
@@ -53,7 +54,6 @@ export default function ExactHero(props) {
       }
     };
     fetchData();
-    return data, homeWorldName, filmsTitle;
 
     // console.log("login via facebook to continue..");
   }, []);
@@ -92,6 +92,7 @@ export default function ExactHero(props) {
             </li>
           </ul>
         </div>{" "}
+        <img alt="aboba" src="R2D2" />
         <div>
           <button className="hsbtn" onClick={() => history.push("/swapi")}>
             {" "}
