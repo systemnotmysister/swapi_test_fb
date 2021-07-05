@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.ul {
+  list-style-type: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -51,14 +54,31 @@
   text-align: center;
 }
 .hswrapper {
+  margin-top: 5%;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #086179;
   /* margin-right: 50%; */
   margin-bottom: auto;
-  padding-block-start: 5%;
+  /* padding-block-start: 5% */
+
   position: relative;
+  justify-content: flex-end;
   text-align: left;
-  display: flex;
+  display: block;
   width: 50%;
 }
+
+.inner_hs {
+  display: flex;
+  justify-content: center;
+}
+.inner_hs_ul {
+  display: flex!;
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
 .hsbtn {
   margin-bottom: auto;
   margin-block-end: 40px;

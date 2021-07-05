@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState, useContext } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Context } from "./Facebook";
-import R2D2 from "../";
 import { Card } from "antd";
 import { Button } from "antd";
 
@@ -42,7 +41,7 @@ export default function ExactHero(props) {
           setVichles(resp.map((it) => [it.name, it.model]));
           console.log(vehicles);
         });
-        console.log(vehicles, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        console.log(vehicles, "AAA");
       } else {
         return (
           <div>
@@ -76,23 +75,25 @@ export default function ExactHero(props) {
       <>
         {" "}
         <div className="hswrapper">
-          <ul>
-            <li>
-              <ul> name: {data.name}</ul>
-              <ul> height: {data.height}</ul>
-              <ul> mass: {data.mass}</ul>
-              <ul> hair_color: {data.hair_color}</ul>
-              <ul> skin_color : {data.skin_color}</ul>
-              <ul> eye_color: {data.eye_color}</ul>
-              <ul> birth_year: {data.birth_year}</ul>
-              <ul> gender: {data.gender}</ul>
-              <ul> homeworld: {homeWorldName} </ul>
-              <ul type="text"> films: {filmsTitle.join(", ")} </ul>
-              <ul type="text"> vehicles: {vehicles.join(",")}</ul>
-            </li>
-          </ul>
+          <div className="inner_hs">
+            <ul className="inner_hs_ul">
+              <li>
+                <ul> name: {data.name}</ul>
+                <ul> height: {data.height}</ul>
+                <ul> mass: {data.mass}</ul>
+                <ul> hair_color: {data.hair_color}</ul>
+                <ul> skin_color : {data.skin_color}</ul>
+                <ul> eye_color: {data.eye_color}</ul>
+                <ul> birth_year: {data.birth_year}</ul>
+                <ul> gender: {data.gender}</ul>
+                <ul> homeworld: {homeWorldName} </ul>
+                <ul type="text"> films: {filmsTitle.join(", ")} </ul>
+                <ul type="text"> vehicles: {vehicles.join(",")}</ul>
+              </li>
+            </ul>
+          </div>
         </div>{" "}
-        <img alt="aboba" src="R2D2" />
+        {/* <img src={"/Vader_-_02_23235"} alt="Write something here" />{" "} */}
         <div>
           <button className="hsbtn" onClick={() => history.push("/swapi")}>
             {" "}
