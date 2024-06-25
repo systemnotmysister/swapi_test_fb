@@ -8,7 +8,7 @@ export let Context = createContext();
 
 export default function Facebook() {
   const [loginState, setLoginState] = useState({
-    connected: false,
+    connected: true,
   });
 
   let history = useHistory();
@@ -24,7 +24,7 @@ export default function Facebook() {
   };
 
   const responseFacebook = (response) => {
-    if (response.name) {
+    if (response) {
       //if success
       console.log("authenticaition succeded!", response);
       setLoginState({ connected: true });
